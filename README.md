@@ -1,14 +1,14 @@
-[kdengine-py](https://github.com/koirdev/kdengine-py/edit/main/README.md#kdengine-py)
+[kdengine-py](https://github.com/koirdev/kdengine-py/tree/main#kdengine-py)
 
-[Libraries](https://github.com/koirdev/kdengine-py/edit/main/README.md#libraries)
+[Libraries](https://github.com/koirdev/kdengine-py/tree/main#libraries)
 
-[Building to *.exe](https://github.com/koirdev/kdengine-py/edit/main/README.md#building-to-exe)
+[Building to *.exe](https://github.com/koirdev/kdengine-py/tree/main#building-to-exe)
 
-[License(s)](https://github.com/koirdev/kdengine-py/edit/main/README.md#licenses)
+[License(s)](https://github.com/koirdev/kdengine-py/tree/main#licenses)
 
 ---
 
-[Demo game](https://github.com/koirdev/kdengine-py/edit/main/README.md#demo-game)
+[Demo game](https://github.com/koirdev/kdengine-py/tree/main#demo-game)
 
 # kdengine-py
 A game engine based on [Shirraria](https://github.com/koirdev/Shirraria)'s source code.
