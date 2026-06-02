@@ -1,0 +1,6 @@
+
+@echo The PyInstaller library was used to build the game
+@echo Building to exe file...
+@echo Please wait...
+pyinstaller --debug all --distpath win_build -n shirraria main.py &
+pause

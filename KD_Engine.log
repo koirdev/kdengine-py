@@ -1,0 +1,19 @@
+Loading modules...
+2026-03-27 00:09:49 DEBUG Starting new HTTPS connection (1): koirdev.su:443
+2026-03-27 00:09:49 DEBUG https://koirdev.su:443 "GET /assets/files/assets.zip HTTP/1.1" 200 35619261
+assets directory exists.
+Debug mode enabled.
+Game build: ForkMania v0.1-dev
+OS Info:
+Platform system: Windows
+Platform release: 11
+Platform version: 10.0.26100
+Platform architecture: ('64bit', 'WindowsPE')
+The Discord.exe process was not found.
+'ENABLE_DISCORD' changed to: 0
+Opening KD_Engine.log file...
+screenshots directory exists.
+Taking a screenshot...
+Done. Saved in screenshots/screenshot.jpg directory.
+Opening screenshots/screenshot.jpg file...
+Opening KD_Engine.log file...
