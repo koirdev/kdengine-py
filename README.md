@@ -6,6 +6,9 @@
 
 [License(s)](https://github.com/koirdev/kdengine-py/tree/main#licenses)
 
+[Screenshots](https://github.com/koirdev/kdengine-py/tree/main#screenshots-debian-13-kde-plasma-windowed)
+
+
 ---
 
 [Demo game](https://github.com/koirdev/kdengine-py/tree/main#demo-game)
@@ -52,9 +55,21 @@ A game engine based on [Shirraria](https://github.com/koirdev/Shirraria)'s sourc
 
 in dev...
 
-# License(s)
+# Licenses
 
 The project is distributed under the [**MIT** License](LICENSE).
+
+['42dotSans' font license](https://github.com/shirok1/fontsource-font-files/blob/main/fonts/google/42dot-sans/LICENSE).
+
+'Motley Forces' font - Free for use.
+
+'Nepoboy' font - Free for use.
+
+['Open Sans' font license](https://fonts.google.com/specimen/Open+Sans/license).
+
+
+['Unbounded' font license](https://fonts.google.com/specimen/Unbounded/license).
+
 
 ---
 
