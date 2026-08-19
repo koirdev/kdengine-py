@@ -7,7 +7,7 @@ responce = requests.get(url)
 
 def downloadAssetsFromURL():
 	try:
-		print(f"Downloading resources from: {url} - URL") 
+		print(f"Downloading resources from: '{url}'") 
 		local_file_name = "assets.zip" # Set a custom name for downloaded file.
 
 		with open(local_file_name, "wb") as f:
@@ -21,7 +21,10 @@ def downloadAssetsFromURL():
 	# requests.RequestException - A Connection error occurred.
 	except requests.RequestException:
 		print("requests.RequestException - A Connection error occurred.")
-		URLRequestExceptionError()
+		ErrorWinTitle = "requests.RequestException"
+		ErrorWinText = "A Connection error occurred."
+		ErrorWinIcon = "critical"
+		ErrorWin()
 		sys.exit()
 
 	# requests.ConnectionError - There was an ambiguous exception that occurred while handling your request.

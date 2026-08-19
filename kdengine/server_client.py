@@ -1,6 +1,6 @@
 # join me in death.
 import socket, sys
-from message_box import ServerTimeOutError, ServerConnectionResetError, ServerConnectionRefusedError
+from message_box import *
 from config import IP, PORT, DEBUG_MODE
 
 def RunClient():
@@ -23,18 +23,27 @@ def RunClient():
     # TimeoutError
 	except TimeoutError:
 		print("TimeOutError")
-		ServerTimeOutError()
+		ErrorWinTitle = "TimeOutError"
+		ErrorWinText = "The connection to the server has timed out or the server is currently unavailable. Please check your internet connection."
+		ErrorWinIcon = "critical"
+		ErrorWin()
 		sys.exit()
 
     # ConnectionResetError
 	except ConnectionResetError:
 		print("ConnectionResetError")
-		ServerConnectionResetError()
+		ErrorWinTitle = "ConnectionResetError"
+		ErrorWinText = "Connection to the server was interrupted."
+		ErrorWinIcon = "critical"
+		ErrorWin()
 		sys.exit()
 
 	# ConnectionRefusedError		
 	except ConnectionRefusedError:
 		print("ConnectionRefusedError")
-		ServerConnectionRefusedError()
+		ErrorWinTitle = "ConnectionRefusedError"
+		ErrorWinText = "No connection could be made because the target machine actively refused it."
+		ErrorWinIcon = "critical"
+		ErrorWin()
 		sys.exit()
 

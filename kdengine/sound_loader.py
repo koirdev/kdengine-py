@@ -1,5 +1,6 @@
 import pygame
 from config import *
+from os_info import PLATFORM_SYS
 
 pygame.mixer.init()
 
@@ -20,8 +21,14 @@ if MUSIC == 1:
 
 # Load sound effects.
 if SFX == 1:
-    clickSound = pygame.mixer.Sound('assets/sfx/click.wav')
-    click2Sound = pygame.mixer.Sound('assets/sfx/click2.wav')
-    whooshSound = pygame.mixer.Sound('assets/sfx/whoosh.wav')
+    if PLATFORM_SYS == 'Linux':
+        clickSound = pygame.mixer.Sound('../assets/sfx/click.wav')
+        click2Sound = pygame.mixer.Sound('../assets/sfx/click2.wav')
+        whooshSound = pygame.mixer.Sound('../assets/sfx/whoosh.wav')
+else:
+    if PLATFORM_SYS == 'Windows':
+        clickSound = pygame.mixer.Sound('assets/sfx/click.wav')
+        click2Sound = pygame.mixer.Sound('assets/sfx/click2.wav')
+        whooshSound = pygame.mixer.Sound('assets/sfx/whoosh.wav')
 
 

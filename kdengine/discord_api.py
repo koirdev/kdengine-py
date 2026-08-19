@@ -14,7 +14,7 @@ try:
 	pm.open_process_from_name(ProcessName) # Searching for 'Discord.exe' process.
 	if ENABLE_DISCORD == 1:
 		from pypresence import Presence # The simple rich presence client in pypresence
-		client_id = "1459514805340868782" # Client ID
+		game_id = "1459514805340868782" # Game ID
 		#print(client_id)
 
 		def discordClient():

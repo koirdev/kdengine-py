@@ -3,13 +3,25 @@ import sys
 from config import WARNING_MESSAGE
 from PyQt5.QtWidgets import QMessageBox, QApplication, QPushButton
 
-# ---- Outdated shit ---- (depending).
-if WARNING_MESSAGE == 1:
+global ErrorWinTitle
+global ErrorWinText
+global ErrorWinIcon
+ErrorWinTitle = None 
+ErrorWinText = None
+ErrorWinIcon = "warning"
+
+if ErrorWinIcon == "warning":
+	ErrorWinIcon = QMessageBox.Warning
+
+if ErrorWinIcon == "critical":
+	ErrorWinIcon = QMessageBox.Critical
+
+def ErrorWin():
 	app = QApplication([])
 	msg = QMessageBox()
-	msg.setIcon(QMessageBox.Warning)
-	msg.setText("This build is unstable!")
-	msg.setWindowTitle("Warning! - WARNING_MESSAGE")
+	msg.setIcon(ErrorWinIcon)
+	msg.setText(ErrorWinText)
+	msg.setWindowTitle(ErrorWinTitle)
 	msg.show()
 	app.exec()
 
@@ -23,34 +35,6 @@ def WindowModeError():
 	msg.show()
 	running = False
 	pygame.quit()
-	app.exec()
-
-# ---- Server messages ----
-def ServerTimeOutError():
-	app = QApplication([])
-	msg = QMessageBox()
-	msg.setIcon(QMessageBox.Critical)
-	msg.setText("The connection to the server has timed out or the server is currently unavailable. Please check your internet connection.")
-	msg.setWindowTitle("Critical Error - TimeOutError")
-	msg.show()
-	app.exec()
-
-def ServerConnectionResetError():
-	app = QApplication([])
-	msg = QMessageBox()
-	msg.setIcon(QMessageBox.Critical)
-	msg.setText("Connection to the server was interrupted.")
-	msg.setWindowTitle("Critical Error - ConnectionResetError")
-	msg.show()
-	app.exec()
-
-def ServerConnectionRefusedError():
-	app = QApplication([])
-	msg = QMessageBox()
-	msg.setIcon(QMessageBox.Critical)
-	msg.setText("No connection could be made because the target machine actively refused it.")
-	msg.setWindowTitle("Critical Error - ConnectionRefusedError")
-	msg.show()
 	app.exec()
 
 # ---- Other messages ----
@@ -91,7 +75,7 @@ def URLRequestExceptionError():
 	msg = QMessageBox()
 	msg.setIcon(QMessageBox.Critical)
 	msg.setText("A Connection error occurred.")
-	msg.setWindowTitle("Critical Error - requests.RequestException")
+	msg.setWindowTitle("requests.RequestException")
 	msg.show()
 	app.exec()
 

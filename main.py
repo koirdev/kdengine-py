@@ -62,7 +62,13 @@ if CONTROLS == 2: # XBOX 360 Controls (In the config file it's '2').
 
 # Window title and icon
 pygame.display.set_caption("ForkMania") # Title.
-icon = pygame.image.load('assets/images/icon.png') # Icon.
+
+if PLATFORM_SYS == 'Linux':
+    icon = pygame.image.load('../assets/images/icon.png') # Icon.
+else:
+    if PLATFORM_SYS == 'Windows':
+        icon = pygame.image.load('assets/images/icon.png') # Icon.
+
 pygame.display.set_icon(icon)
 clock = pygame.time.Clock() 
 
@@ -130,7 +136,7 @@ def MainMenu():
                         checkScreenshotsFolder()
                         print("Taking a screenshot...")
                         pygame.image.save(window, SCREENSHOTS_FILE_PATH)
-                        print(f"Done. Saved in {SCREENSHOTS_FILE_PATH} directory.")
+                        print(f"Done - Saved in '{SCREENSHOTS_FILE_PATH}' directory.")
                         openScreenshotFile()
 
             # Keyboard input.

@@ -10,4 +10,4 @@ PLATFORM_ARCH = platform.architecture() # Platform architecture
 if DEBUG_MODE == 1:
 	print("Debug mode enabled.")
 
-print(f"Game version: {GAME_VERSION}\nEngine version: {ENGINE_VERSION}\nOS Info:\nPlatform system: {PLATFORM_SYS}\nPlatform release: {PLATFORM_RELEASE}\nPlatform version: {PLATFORM_VERSION}\nPlatform architecture: {PLATFORM_ARCH}")
+print(f"Game version: '{GAME_VERSION}'\nEngine version: '{ENGINE_VERSION}'\nOS Info:\nPlatform system: '{PLATFORM_SYS}'\nPlatform release: '{PLATFORM_RELEASE}'\nPlatform version: '{PLATFORM_VERSION}'\nPlatform architecture: '{PLATFORM_ARCH}'")

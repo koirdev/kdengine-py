@@ -12,7 +12,6 @@ if LOGGING == 1:
 
 print("Loading KD Engine...")
 
-from antiCheat import *
 from checkFiles import *
 from server_client import *
 from os_info import *
@@ -21,7 +20,7 @@ from openLinks import *
 from message_box import *
 from splashes import *
 from sound_loader import *
-from discord_api import *
+#from discord_api import *
 from urlDownloadContent import *
 from zipExtractor import *
 from classes import *

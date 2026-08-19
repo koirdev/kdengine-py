@@ -7,11 +7,11 @@ KD_URL = 'https://koirdev.su/'
 
 def OpenLogFile():
 	try:
-		print(f"Opening {LOG_FILE_NAME} file...")
+		print(f"Opening '{LOG_FILE_NAME}' file...")
 		os.startfile(LOG_FILE_NAME)
 
 	except FileNotFoundError: # If 'KD_Engine.log' was not found.
-		print(f"The {LOG_FILE_NAME} file was not found or not exist.")
+		print(f"The '{LOG_FILE_NAME}' file was not found or not exist.")
 		pass
 
 def OpenGitHubLink():
