@@ -10,13 +10,15 @@
 
 [Demo game](https://github.com/koirdev/kdengine-py/tree/main#demo-game)
 
-# kdengine-py
+# KD Engine Pygame (kdengine-py)
+<img width="400" height="600" src="https://github.com/koirdev/koirdev/blob/main/assets/kdEngineLogo.png?raw=true"></a>
+
+---
 A game engine based on [Shirraria](https://github.com/koirdev/Shirraria)'s source code.
 
 > [!IMPORTANT]
-> This project is frozen due to concerns about blocking python.org and pypi.org in Russia.
 > 
-> This build is not optimized and may be unstable.
+> This project is not optimized and may be unstable.
 >
 > This project is being developed for interest and may stop receiving updates in the future. This project was developed for educational purposes only, and its use is not recommended.
 >
@@ -46,6 +48,10 @@ A game engine based on [Shirraria](https://github.com/koirdev/Shirraria)'s sourc
 
 3. After that, copy 'assets' and 'kdengine' folders into 'win_build/shirraria/' directory.
 
+# Building for Linux
+
+in dev...
+
 # License(s)
 
 The project is distributed under the [**MIT** License](LICENSE).
@@ -55,4 +61,10 @@ The project is distributed under the [**MIT** License](LICENSE).
 # Demo game
 
 The game ForkMania (A fork of Shirraria) is used as a demo project for the engine.
+
+# Screenshots (Debian 13 KDE Plasma, Windowed)
+<img width="400" height="600" src="https://github.com/koirdev/koirdev/blob/main/assets/kdEnginePyScr1.png"></a>
+<img width="400" height="600" src="https://github.com/koirdev/koirdev/blob/main/assets/kdEnginePyScr3.png"></a>
+<img width="400" height="600" src="https://github.com/koirdev/koirdev/blob/main/assets/kdEnginePyScr2.png"></a>
+
 
