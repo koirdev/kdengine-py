@@ -6,17 +6,22 @@
 
 [License(s)](https://github.com/koirdev/kdengine-py/tree/main#licenses)
 
+[Screenshots](https://github.com/koirdev/kdengine-py/tree/main#screenshots-debian-13-kde-plasma-windowed)
+
+
 ---
 
 [Demo game](https://github.com/koirdev/kdengine-py/tree/main#demo-game)
 
-# kdengine-py
+# KD Engine Pygame (kdengine-py)
+<img width="400" height="600" src="https://github.com/koirdev/koirdev/blob/main/assets/kdEngineLogo.png?raw=true"></a>
+
+---
 A game engine based on [Shirraria](https://github.com/koirdev/Shirraria)'s source code.
 
 > [!IMPORTANT]
-> This project is frozen due to concerns about blocking python.org and pypi.org in Russia.
 > 
-> This build is not optimized and may be unstable.
+> This project is not optimized and may be unstable.
 >
 > This project is being developed for interest and may stop receiving updates in the future. This project was developed for educational purposes only, and its use is not recommended.
 >
@@ -46,13 +51,35 @@ A game engine based on [Shirraria](https://github.com/koirdev/Shirraria)'s sourc
 
 3. After that, copy 'assets' and 'kdengine' folders into 'win_build/shirraria/' directory.
 
-# License(s)
+# Building for Linux
+
+in dev...
+
+# Licenses
 
 The project is distributed under the [**MIT** License](LICENSE).
+
+['42dotSans' font license](https://github.com/shirok1/fontsource-font-files/blob/main/fonts/google/42dot-sans/LICENSE).
+
+'Motley Forces' font - Free for use.
+
+'Nepoboy' font - Free for use.
+
+['Open Sans' font license](https://fonts.google.com/specimen/Open+Sans/license).
+
+
+['Unbounded' font license](https://fonts.google.com/specimen/Unbounded/license).
+
 
 ---
 
 # Demo game
 
 The game ForkMania (A fork of Shirraria) is used as a demo project for the engine.
+
+# Screenshots (Debian 13 KDE Plasma, Windowed)
+<img width="400" height="600" src="https://github.com/koirdev/koirdev/blob/main/assets/kdEnginePyScr1.png"></a>
+<img width="400" height="600" src="https://github.com/koirdev/koirdev/blob/main/assets/kdEnginePyScr3.png"></a>
+<img width="400" height="600" src="https://github.com/koirdev/koirdev/blob/main/assets/kdEnginePyScr2.png"></a>
+
 
