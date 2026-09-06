@@ -1,18 +1,20 @@
 import requests, sys, os
 from zipExtractor import *
 from message_box import *
-from config import url
+from config import DOWNLOAD_CONTENT_URL
+from pathlib import Path
 
-responce = requests.get(url)
+responce = requests.get(DOWNLOAD_CONTENT_URL)
 
 def downloadAssetsFromURL():
+	fileName = (Path(__file__).name)
 	try:
-		print(f"Downloading resources from: '{url}'") 
+		print(f"Downloading resources from: '{DOWNLOAD_CONTENT_URL}'") 
 		local_file_name = "assets.zip" # Set a custom name for downloaded file.
 
 		with open(local_file_name, "wb") as f:
 			f.write(responce.content)
-			print(f"Done, downloaded in:", local_file_name)
+			print("Done, downloaded in:", local_file_name)
 			responce.close() # Closes after downloading file.
 			ExtractZIPAssets() # Runs ZIP Extractor for unziping the downloaded file.
 
@@ -41,7 +43,7 @@ def downloadAssetsFromURL():
 
 	# requests.TooManyRedirects - Too many redirects.
 	except requests.TooManyRedirects:
-		print("requests.TooManyRedirects - Too many redirects.")
+		print(f"'{fileName}' - requests.TooManyRedirects - Too many redirects.")
 		URLTooManyRedirectsError()
 		sys.exit()
 

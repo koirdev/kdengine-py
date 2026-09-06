@@ -1,6 +1,6 @@
+print("Loading KD Engine...")
 from config import *
-
-# Logging.
+	# Logging.
 if LOGGING == 1:
 	import os, sys, logging, traceback
 	from logging.handlers import RotatingFileHandler
@@ -9,9 +9,7 @@ if LOGGING == 1:
 	logging.basicConfig(filename=log, level=logging.DEBUG, format="%(asctime)s %(levelname)s %(message)s",datefmt='%Y-%m-%d %H:%M:%S')
 	sys.stdout = open(log, "a", buffering=1)
 	sys.stderr = open(log, "a", buffering=1)
-
-print("Loading KD Engine...")
-
+from pathlib import Path
 from checkFiles import *
 from server_client import *
 from os_info import *
@@ -26,15 +24,6 @@ from zipExtractor import *
 from classes import *
 from controls.keyboard_config import *
 from controls.xbox360_config import *
-
-#from localhost_server.server import * - server test stuff...
-
-
-
-
-
-
-
 
 
 

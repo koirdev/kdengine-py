@@ -1,7 +1,10 @@
-print("Loading game...")
+ENGINE_FOLDER = "kdengine/"
+
 import sys, pygame, math, subprocess, os
-sys.path.append("kdengine/")
+sys.path.append(ENGINE_FOLDER)
+print(f"Engine folder: '{ENGINE_FOLDER}'")
 from kdengine import *
+
 
 pygame.init()
 
@@ -55,7 +58,7 @@ if CONTROLS == 2: # XBOX 360 Controls (In the config file it's '2').
 
         # Excepts the pygame error (For example if connected controller(s) was not found and the 'CONTROLS' variable is '2').
     except pygame.error:
-        print("WARNING: Controller(s) not detected. Change the 'CONTROLS' parameter to '1' to use keyboard controls. Keyboard controls will be automatically switched over.")
+        print(f"WARNING: Controller(s) not detected. Change the 'CONTROLS' parameter to '1' to use keyboard controls. Keyboard controls will be automatically switched over.")
         # If connected controller(s) was not found and the 'CONTROLS' variable equals '2', then, it's changes to: '1' - Keyboard input.
         CONTROLS = 1
 
@@ -107,8 +110,6 @@ def fade_in(width, height): # Fade in - (When qutting to menu or enters on a 'Ga
 
 
 def MainMenu():
-    if MUSIC == 1:
-        MainMenuMusic()
     global running, selected_section, shirLogo_x, CONTROLS
     menuX = 1
     menu_speed = 15
@@ -124,7 +125,7 @@ def MainMenu():
                 if e.type == pygame.QUIT:
                     if ENABLE_DISCORD == 1:
                         discordClientClose()
-                        print("Discord API closed.")
+                        print(f"'{fileName}' - Discord API closed.")
                     running = False
                     pygame.quit()
                     sys.exit()
@@ -133,11 +134,19 @@ def MainMenu():
             # 'F7' - To take a screenshot.
                 if e.type == pygame.KEYUP:
                     if e.key == screenshot_keyboard:
-                        checkScreenshotsFolder()
-                        print("Taking a screenshot...")
-                        pygame.image.save(window, SCREENSHOTS_FILE_PATH)
+                        checkScreenshotsFolder() # checkFiles.py
+                        print(f"Taking a screenshot...")
+                        print(SCREENSHOTS_FILE_PATH)
+
+                        # Check OS info for different paths
+                        if PLATFORM_SYS == "Windows":
+                            pygame.image.save(window, SCREENSHOTS_FILE_PATH)
+                        else:
+                            if PLATFORM_SYS == "Linux":
+                                pygame.image.save(window, "../" + SCREENSHOTS_FILE_PATH)
                         print(f"Done - Saved in '{SCREENSHOTS_FILE_PATH}' directory.")
-                        openScreenshotFile()
+
+                        openScreenshotFile() # openLinks.py
 
             # Keyboard input.
                 if e.type == pygame.KEYDOWN:
@@ -223,9 +232,6 @@ def MainMenu():
             clock.tick(FPS)
 
 def Level_Select():
-    if MUSIC == 1:
-        LevelSelectMusic()
-
     global running
     while running:
 
@@ -258,10 +264,7 @@ def Level_Select():
         # Update screen
         pygame.display.update()
         clock.tick(FPS)
-
-
-
-            
+        
 def Level_1():
     global running, character_y, character_x, character_speed, WINDOW_MODE, window
     while running:
@@ -346,7 +349,6 @@ def Level_1():
         clock.tick(FPS)
 
     fade_in(1280,720) # Fade in.
-
 
 # Switch scene
 switch_scene(MainMenu)
