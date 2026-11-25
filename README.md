@@ -29,17 +29,24 @@ A game engine based on [Shirraria](https://github.com/koirdev/Shirraria)'s sourc
 > 
 
 # Libraries
-```pip install pypresence``` - pypresence (Discord Rich Presence).
+Use the [requirements.txt](requirements.txt) file to install all libraries -  ```pip install -r requirements.txt```
 
-```pip install pygame==2.5.2``` - pygame (Recommended to use 2.5.2 ver.).
+List of all libraries:
 
-```pip install Pymem``` - Pymem.
+```pygame==2.6.1```
 
-```pip install PyQt5``` - PyQt5 (Qt5 for Python).
+```pyinstaller==6.20.0```
 
-```pip install pillow``` - Pillow.
+```Pymem==1.14.0```
 
-```pip install pyinstaller``` - PyInstaller, needs for building project into *.exe file.
+```pypresence==4.6.1```
+
+```PyQt5==5.15.11```
+
+```requests==2.32.3```
+
+```pillow==12.2.0```
+
 
 # Building to *.exe
 
