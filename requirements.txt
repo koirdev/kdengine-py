@@ -1,0 +1,7 @@
+pygame==2.6.1
+pyinstaller==6.20.0
+Pymem==1.14.0
+pypresence==4.6.1
+PyQt5==5.15.11
+requests==2.32.3
+pillow==12.2.0
