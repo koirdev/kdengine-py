@@ -1,5 +1,5 @@
 import os, sys
-from urlDownloadContent import *
+#from urlDownloadContent import *
 from config import ASSETS_DIR, SCREENSHOTS_DIR
 from os_info import PLATFORM_SYS
 from pathlib import Path
@@ -16,7 +16,7 @@ def checkFiles():
 
 	if not os.path.isdir(ASSETS_DIR): # if 'assets' folder not exists. (False)
 		print(f"'{fileName}' - '{ASSETS_DIR}' directory is not exists.") 
-		downloadAssetsFromURL() # Downloading from URL address a resources for the game.
+		pass # Downloading from URL address a resources for the game.
 
 # Checking OS info for different paths
 if PLATFORM_SYS == "Windows":

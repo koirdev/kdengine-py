@@ -2,26 +2,25 @@ import pygame, os
 from config import *
 from splashes import random_splash
 from os_info import PLATFORM_SYS
-os.chdir(os.path.dirname(os.path.realpath(__file__)))
+
+
 
 pygame.display.init()
 pygame.font.init()
+dirLocation = ""
 
+if PLATFORM_SYS == "Linux":
+    dirLocation = ""
 
 # Load images
-if PLATFORM_SYS == 'Linux':
-    character_img = pygame.image.load('../assets/images/player.png')
-    shirLogo = pygame.image.load('../assets/images/shirLogo.png')
-    grass_img = pygame.image.load('../assets/images/grass.png')
-    door1 = pygame.image.load('../assets/images/skull_door.png')
-    loading_screen = pygame.image.load('../assets/images/loading_screen.png')
-else:
-    if PLATFORM_SYS == 'Windows':
-        character_img = pygame.image.load('assets/images/player.png')
-        shirLogo = pygame.image.load('assets/images/shirLogo.png')
-        grass_img = pygame.image.load('assets/images/grass.png')
-        door1 = pygame.image.load('assets/images/skull_door.png')
-        loading_screen = pygame.image.load('assets/images/loading_screen.png')
+icon = pygame.image.load(f'{dirLocation}assets/images/icon.png') # Icon.
+character_img = pygame.image.load(f'{dirLocation}assets/images/player.png')
+shirLogo = pygame.image.load(f'{dirLocation}assets/images/shirLogo.png')
+grass_img = pygame.image.load(f'{dirLocation}assets/images/grass.png')
+door1 = pygame.image.load(f'{dirLocation}assets/images/skull_door.png')
+loading_screen = pygame.image.load(f'{dirLocation}assets/images/loading_screen.png')
+#detectBg = pygame.image.load(f'{dirLocation}assets/images/detectBg.png')
+
 
 
 # Resizing images
@@ -32,26 +31,15 @@ door1 = pygame.transform.scale(door1, (190, 400))
 loading_screen = pygame.transform.scale(loading_screen, (WIDTH, HEIGHT))
 
 # Fonts
-if PLATFORM_SYS == 'Linux':
-    font = pygame.font.Font('../assets/fonts/42dotSans-Bold.ttf', 27)
-    pause_tips_font = pygame.font.Font('../assets/fonts/42dotSans-Bold.ttf', 25)
-    pause_font = pygame.font.Font('../assets/fonts/42dotSans-Bold.ttf', 55)
-    if SPLASHES == 1:
-        splash_text = pygame.font.Font('../assets/fonts/Nepoboy-MVMaB.otf', 25)
-    credits_font = pygame.font.Font('../assets/fonts/MotleyForcesRegular-w1rZ3.ttf', 30)
-    menu_font = pygame.font.Font('../assets/fonts/Unbounded-SemiBold.ttf', 50)
-    level_select_title_font = pygame.font.Font('../assets/fonts/Unbounded-SemiBold.ttf', 55)
-    
-else:
-    if PLATFORM_SYS == 'Windows':
-        font = pygame.font.Font('assets/fonts/42dotSans-Bold.ttf', 27)
-        pause_tips_font = pygame.font.Font('assets/fonts/42dotSans-Bold.ttf', 25)
-        pause_font = pygame.font.Font('assets/fonts/42dotSans-Bold.ttf', 55)
-        if SPLASHES == 1:
-            splash_text = pygame.font.Font('assets/fonts/Nepoboy-MVMaB.otf', 25)
-        credits_font = pygame.font.Font('assets/fonts/MotleyForcesRegular-w1rZ3.ttf', 30)
-        menu_font = pygame.font.Font('assets/fonts/Unbounded-SemiBold.ttf', 50)
-        level_select_title_font = pygame.font.Font('assets/fonts/Unbounded-SemiBold.ttf', 55)
+font = pygame.font.Font(f'{dirLocation}assets/fonts/42dotSans-Bold.ttf', 27)
+pause_tips_font = pygame.font.Font(f'{dirLocation}assets/fonts/42dotSans-Bold.ttf', 25)
+pause_font = pygame.font.Font(f'{dirLocation}assets/fonts/42dotSans-Bold.ttf', 55)
+if SPLASHES == 1:
+    splash_text = pygame.font.Font(f'{dirLocation}assets/fonts/Nepoboy-MVMaB.otf', 25)
+credits_font = pygame.font.Font(f'{dirLocation}assets/fonts/MotleyForcesRegular-w1rZ3.ttf', 30)
+menu_font = pygame.font.Font(f'{dirLocation}assets/fonts/Unbounded-SemiBold.ttf', 50)
+level_select_title_font = pygame.font.Font(f'{dirLocation}assets/fonts/Unbounded-SemiBold.ttf', 55)
+
 
 # Text
 if SPLASHES == 1:
@@ -60,6 +48,8 @@ if SPLASHES == 1:
 build_info_text = font.render(f"{GAME_VERSION}, {ENGINE_VERSION}", False,(252, 250, 250))
 
 level_select_title_text = level_select_title_font.render("Level Select",False,(252,250,250))
+#level_select_title_text = font.render(f"The process ''{processName}'' has been detected. PID: {status}",False,(252,250,250))
+
 if WARNING_TEXT == 1:
     warning_text = font.render("This build is unstable!",False,(252, 250, 250))
 help_text = font.render("Released under MIT License.",False,(252, 250, 250))

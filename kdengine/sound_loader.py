@@ -7,7 +7,7 @@ def loadAudio(): # .py file name
     pygame.mixer.init()
 
     if PLATFORM_SYS == 'Linux':
-        diff_path = "../"
+        diff_path = ""
     else:
         if PLATFORM_SYS == 'Windows':
             diff_path = ""            

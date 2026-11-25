@@ -19,7 +19,7 @@ from message_box import *
 from splashes import *
 from sound_loader import *
 #from discord_api import *
-from urlDownloadContent import *
+#from urlDownloadContent import *
 from zipExtractor import *
 from classes import *
 from controls.keyboard_config import *

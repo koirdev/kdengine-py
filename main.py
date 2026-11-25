@@ -5,7 +5,6 @@ sys.path.append(ENGINE_FOLDER)
 print(f"Engine folder: '{ENGINE_FOLDER}'")
 from kdengine import *
 
-
 pygame.init()
 
 # Checks for initialization error.
@@ -66,11 +65,7 @@ if CONTROLS == 2: # XBOX 360 Controls (In the config file it's '2').
 # Window title and icon
 pygame.display.set_caption("ForkMania") # Title.
 
-if PLATFORM_SYS == 'Linux':
-    icon = pygame.image.load('../assets/images/icon.png') # Icon.
-else:
-    if PLATFORM_SYS == 'Windows':
-        icon = pygame.image.load('assets/images/icon.png') # Icon.
+
 
 pygame.display.set_icon(icon)
 clock = pygame.time.Clock() 
@@ -109,6 +104,8 @@ def fade_in(width, height): # Fade in - (When qutting to menu or enters on a 'Ga
         pygame.time.delay(5)
 
 
+
+
 def MainMenu():
     global running, selected_section, shirLogo_x, CONTROLS
     menuX = 1
@@ -120,12 +117,10 @@ def MainMenu():
         running = False
         Level_Select() 
     while running:
+            
         # Quit Event
             for e in pygame.event.get():
                 if e.type == pygame.QUIT:
-                    if ENABLE_DISCORD == 1:
-                        discordClientClose()
-                        print(f"'{fileName}' - Discord API closed.")
                     running = False
                     pygame.quit()
                     sys.exit()
@@ -161,6 +156,7 @@ def MainMenu():
                     elif e.key in [enter_keyboard]:
                         if SFX == 1:
                             whooshSound.play()
+
 
             # Menu tabs
                         if items[selected_section] == 'Exit game': running = False, pygame.quit(), sys.exit()
@@ -231,10 +227,12 @@ def MainMenu():
             pygame.display.update()
             clock.tick(FPS)
 
+
+
+
 def Level_Select():
     global running
     while running:
-
        # Quit Event
         for e in pygame.event.get():
             if e.type == pygame.QUIT:
@@ -264,6 +262,9 @@ def Level_Select():
         # Update screen
         pygame.display.update()
         clock.tick(FPS)
+        
+
+
         
 def Level_1():
     global running, character_y, character_x, character_speed, WINDOW_MODE, window

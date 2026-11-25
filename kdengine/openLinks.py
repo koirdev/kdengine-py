@@ -4,8 +4,8 @@ from config import SCREENSHOTS_DIR, SCREENSHOTS_FILE_PATH, LOG_FILE_NAME
 from pathlib import Path
 from os_info import PLATFORM_SYS
 
-githubURL = 'https://github.com/koirdev/Shirraria'
-KD_URL = 'https://koirdev.su/'
+githubURL = 'https://github.com/koirdev/kdengine-py/'
+KD_URL = 'koirdevs_site_is_closed'
 
 
 if PLATFORM_SYS == "Windows":
