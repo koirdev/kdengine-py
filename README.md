@@ -2,7 +2,9 @@
 
 [Libraries](https://github.com/koirdev/kdengine-py/tree/main#libraries)
 
-[Building to *.exe](https://github.com/koirdev/kdengine-py/tree/main#building-to-exe)
+[Building for Windows](https://github.com/koirdev/kdengine-py/tree/main#building-for-windows)
+
+[Building for Linux](https://github.com/koirdev/kdengine-py/tree/main#building-for-linux)
 
 [License(s)](https://github.com/koirdev/kdengine-py/tree/main#licenses)
 
@@ -48,7 +50,7 @@ List of all libraries:
 ```pillow==12.2.0```
 
 
-# Building to *.exe
+# Building for Windows
 
 > [!WARNING]
 > Building the project to *.exe is unstable and incorrect! Please keep this in mind before attempting this.
