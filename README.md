@@ -60,7 +60,11 @@ List of all libraries:
 
 # Building for Linux
 
-in dev...
+To build for Linux, use [linuxBuild.sh](linuxBuild.sh) script.
+
+Also if you are using Zsh shell instead of Bash, and PyInstaller doesn't work then add this to your ```~/.zshrc``` config file (```nano ~/.zshrc```):
+
+```export PATH="$HOME/.local/bin:$PATH"```
 
 # Licenses
 
